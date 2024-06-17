@@ -12,6 +12,7 @@
     "lint:fix": "eslint --fix .",
     "prepare": "husky install"
   },
+  "type": "commonjs",
   "author": "",
   "license": "ISC",
   "dependencies": {

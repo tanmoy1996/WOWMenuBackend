@@ -3,7 +3,7 @@ import LocalStrategy from "passport-local";
 import { Users } from "../../src/models";
 import bcrypt from "bcrypt";
 import generateJWTToken from "../../src/utils/generateJWTTokenUtil";
-import * as Sentry from "@sentry/node";
+// import * as Sentry from "@sentry/node";
 
 const localStrategy = new LocalStrategy(
   {},
@@ -17,7 +17,7 @@ const localStrategy = new LocalStrategy(
       }
 
       if (user.length === 0) {
-        Sentry.captureMessage("Username/Email is not registered", "warning");
+        // Sentry.captureMessage("Username/Email is not registered", "warning");
         return done(null, false, "Username/Email is not registered");
       } else if (user[0].role === "owner" && !user[0].isVerified) {
         return done(null, false, "Please verify your account to login");
@@ -37,7 +37,7 @@ const localStrategy = new LocalStrategy(
         }
       }
     } catch (error) {
-      Sentry.captureException(error);
+      // Sentry.captureException(error);
       return done(error);
     }
   },
@@ -61,7 +61,7 @@ export const authenticateUser = async function (req, res, next) {
     },
     function (err, user, info) {
       if (err) {
-        Sentry.captureException(err);
+        // Sentry.captureException(err);
         res.status(401).json({ message: err.message });
       } else if (info) {
         res.status(401).json({ message: info });

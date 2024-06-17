@@ -2,13 +2,13 @@ import { Users } from "../../models";
 import { REFRESH_TOKEN_SECRET_KEY } from "../../../config";
 import isTokenBlackListedUtil from "../../utils/isTokenBlackListedUtil";
 import jwt from "jsonwebtoken";
-import * as Sentry from "@sentry/node";
+// import * as Sentry from "@sentry/node";
 
 export const authRefreshToken = async function (req, res, next) {
   if (req.cookies.refreshToken) {
     const refreshToken = req.cookies.refreshToken.split(" ")[1];
     if (await isTokenBlackListedUtil(refreshToken)) {
-      Sentry.captureMessage("Expired/invalid token passed", "warning");
+      // Sentry.captureMessage("Expired/invalid token passed", "warning");
       res.status(401).json({ message: "Expired/invalid token passed" });
     } else {
       await jwt.verify(
@@ -23,7 +23,7 @@ export const authRefreshToken = async function (req, res, next) {
             );
 
             if (!user) {
-              Sentry.captureMessage("Invalid user details", "warning");
+              // Sentry.captureMessage("Invalid user details", "warning");
               res.status(400).json("Invalid user details");
             }
 
@@ -31,7 +31,7 @@ export const authRefreshToken = async function (req, res, next) {
             req.user = user;
             next();
           } catch (e) {
-            Sentry.captureException(e);
+            // Sentry.captureException(e);
             res.status(400).json("Try after sometime");
           }
         },

@@ -3,7 +3,7 @@ import { CLIENT_APP_URL } from "../../config";
 import generateJWTToken from "../utils/generateJWTTokenUtil";
 import moment from "moment";
 import { isCached, storeDataInCache } from "../utils/cacheUtil";
-import * as Sentry from "@sentry/node";
+// import * as Sentry from "@sentry/node";
 
 const authController = {
   async verifyEmail(req, res) {
@@ -32,7 +32,7 @@ const authController = {
         }
       }
     } catch (error) {
-      Sentry.captureException(error);
+      // Sentry.captureException(error);
       res.status(500).redirect(CLIENT_APP_URL + "?success=false&errorCode=1");
     }
   },

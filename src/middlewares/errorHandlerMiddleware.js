@@ -1,7 +1,7 @@
-import * as Sentry from "@sentry/node";
+// import * as Sentry from "@sentry/node";
 
 const errorHandler = (err, req, res, next) => {
-  Sentry.captureException(err);
+  // Sentry.captureException(err);
   if (typeof err.message !== "undefined") {
     let status = 500;
     if (err.name === "ValidationError") {

@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import sendMailUtil from "../utils/sendMailUtil";
-import { APP_URL } from "../../config";
+import { APP_URL } from "../config";
 import hashPassword from "../utils/hashPasswordUtil";
 import confirmEmailHtmlBody from "../utils/confirmEmailHtmlBody";
 

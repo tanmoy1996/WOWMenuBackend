@@ -1,4 +1,4 @@
-import { redisClient } from "../../server";
+import { redisClient } from "../index";
 
 export const getKey = async (request) => {
   let key = request.query;

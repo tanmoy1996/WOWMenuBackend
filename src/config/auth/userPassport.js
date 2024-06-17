@@ -1,8 +1,8 @@
 import passport from "passport";
 import LocalStrategy from "passport-local";
-import { Users } from "../../src/models";
+import { Users } from "../../models";
 import bcrypt from "bcrypt";
-import generateJWTToken from "../../src/utils/generateJWTTokenUtil";
+import generateJWTToken from "../../utils/generateJWTTokenUtil";
 // import * as Sentry from "@sentry/node";
 
 const localStrategy = new LocalStrategy(

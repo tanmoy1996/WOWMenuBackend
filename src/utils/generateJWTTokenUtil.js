@@ -1,8 +1,5 @@
 import jwt from "jsonwebtoken";
-import {
-  ACCESS_TOKEN_SECRET_KEY,
-  REFRESH_TOKEN_SECRET_KEY,
-} from "../../config";
+import { ACCESS_TOKEN_SECRET_KEY, REFRESH_TOKEN_SECRET_KEY } from "../config";
 
 const tokenProperties = {
   access: {

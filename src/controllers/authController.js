@@ -1,5 +1,5 @@
 import { BlackListedTokens, Users } from "../models";
-import { CLIENT_APP_URL } from "../../config";
+import { CLIENT_APP_URL } from "../config";
 import generateJWTToken from "../utils/generateJWTTokenUtil";
 import moment from "moment";
 import { isCached, storeDataInCache } from "../utils/cacheUtil";

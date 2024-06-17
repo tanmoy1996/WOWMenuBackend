@@ -6,7 +6,7 @@ import {
   RAZORPAY_WEBHOOK_SECRET,
   RAZORPAY_KEY_DEV,
   RAZORPAY_SECRET_DEV,
-} from "../../config";
+} from "../config";
 
 const razorpayController = {
   async getPaymentDetail(req, res) {

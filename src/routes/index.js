@@ -21,7 +21,7 @@ import {
   authValidation,
 } from "../middlewares/requestValidations";
 
-import { authenticateUser } from "../../config/auth/userPassport";
+import { authenticateUser } from "../config/auth/userPassport";
 import { authAccessToken } from "../middlewares/authorization/accessToken";
 import { authRefreshToken } from "../middlewares/authorization/refreshToken";
 

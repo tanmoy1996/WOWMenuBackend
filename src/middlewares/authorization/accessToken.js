@@ -1,5 +1,5 @@
 import { Users } from "../../models";
-import { ACCESS_TOKEN_SECRET_KEY } from "../../../config";
+import { ACCESS_TOKEN_SECRET_KEY } from "../../config";
 import isTokenBlackListedUtil from "../../utils/isTokenBlackListedUtil";
 import jwt from "jsonwebtoken";
 // import * as Sentry from "@sentry/node";

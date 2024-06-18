@@ -17,9 +17,9 @@ menu and order food from the Website itself.
 
 ## Demo
 
-[Restaurant Dashboard Demo](https://wow-menu.netlify.app/login)
+[Restaurant Dashboard Demo](https://wowmenu.netlify.app/login)
 
-[Customer Demo](https://wow-menu.netlify.app/6319f53e3cf4ba89de5d6f6e/1)
+[Customer Demo](https://wowmenu.netlify.app/63077d6ac31f771aaca9c858/1)
 
 Please Note:
 

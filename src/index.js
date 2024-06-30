@@ -40,7 +40,7 @@ redisClient
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://wowmenu.netlify.app"],
+    origin: ["http://localhost:3000", "https://wowmenu.netlify.app", "https://47603472-851b-4ae2-b4b3-cd0cfb9657a3.e1-us-east-azure.choreoapps.dev"],
     allowedHeaders: ["Content-Type"],
   }),
 );
